@@ -4,7 +4,12 @@
 
 
 
- > **Note on the Frontend:** The frontend is still in an early stage of development and represents a raw version of app vision. It does not fully showcase the intended quality and user experience just yet. This area is slated for significant enhancements moving forward.
+ > **Important Notes:** 
+ > **The frontend** is still in an early stage of development and represents a raw version of app vision. It does not fully showcase the intended quality and user experience just yet. This area is slated for significant enhancements moving forward.
+
+ > Additionally, it's important to note that the **email functionality**, essential for operations such as verification and notifications, is not active in the current demo hosted for demonstration purposes. While this feature has been meticulously tested with Mailtrap in the development environment, activating it in the live environment is planned only if the project moves towards commercialization. This approach ensures that we prioritize the safety and integrity of the project.
+
+
 
 ## My Contribution to App Development
 - Application design (User requirements, process flows, UX low fidelity design...)
@@ -42,41 +47,27 @@ The database design focuses on efficiency and scalability, with entities such as
 
 
 ## Demo and Documentation
-Application can be accessed on the following link: [GitHub](http://307w123.e2.mars-hosting.com/)
+Application can be accessed on the following link: [Taskenize](http://307w123.e2.mars-hosting.com/)
 
 Demo has limited functionality available without login - super basic functionality with tasks being kept in the localStorage (max 10 tasks).
 
 > Overview of the envisioned app possibilities can be understood using the following **login details:**
-
-
-> Username: taskenize@test.com  
-> Password: Abcd123!  
+> Username: **taskenize@test.com**  
+> Password: **Abcd123!**  
 > (Please do not attempt to change the password - you will not be able to proceed due to email functionality not being enabled.)
 
 
 Also, you can feel free to consult some of the documentation related links listed below:
 
-- [Database structure:](https://drive.google.com/file/d/12C9I5N8rUo2w6MeVaAs3YavWJoRIXnOU/view?usp=drive_link)
+- [Database structure](https://drive.google.com/file/d/12C9I5N8rUo2w6MeVaAs3YavWJoRIXnOU/view?usp=drive_link)
 
-- FE_BE Contract:
+- [FE_BE Contract](https://docs.google.com/document/d/19u_XQ0LXa3V3HBpcbWQZtc-UkjMYKVgolsMGZbXUGAo/edit?usp=drive_link)
 
+- [Users and Permissions](https://docs.google.com/spreadsheets/d/1dN_jyEfNSbEReMjKAUCieN-CDkB1aCsrzQemdgMoxjc/edit?usp=drive_link)
 
-[GitHub](https://docs.google.com/document/d/19u_XQ0LXa3V3HBpcbWQZtc-UkjMYKVgolsMGZbXUGAo/edit?usp=drive_link)
+- [UX screenshots from Figma](https://drive.google.com/drive/folders/1BRE-na_T7RnDtNefDWGkXG-dlf-2urSh?usp=drive_link)
 
-- Users and Permissions:
-
-
-[GitHub](https://docs.google.com/spreadsheets/d/1dN_jyEfNSbEReMjKAUCieN-CDkB1aCsrzQemdgMoxjc/edit?usp=drive_link)
-
-- UX screenshots from Figma:
-
-
-[GitHub](https://drive.google.com/drive/folders/1BRE-na_T7RnDtNefDWGkXG-dlf-2urSh?usp=drive_link)
-
-- Use cases:
-
-
-[GitHub](https://drive.google.com/drive/folders/1MK9CRqY_eozBhuExTfNfmLgq8f9iVad_?usp=drive_link)
+- [Use cases](https://drive.google.com/drive/folders/1MK9CRqY_eozBhuExTfNfmLgq8f9iVad_?usp=drive_link)
 
 
 ## Development Environment
@@ -87,4 +78,4 @@ The project was developed using the MARS engine, a serverless technology that al
 The project is licensed under the MIT license.
 
 ## Contact
-For additional information, questions, or collaboration opportunities, feel free to contact me at: [irena.popovic07@gmail.com]
+For additional information, questions, or collaboration opportunities, feel free to contact me at: [irena.popovic07@gmail.com](mailto:irena.popovic07@gmail.com)
