@@ -46,19 +46,17 @@ Application can be accessed on the following link: [GitHub](http://307w123.e2.ma
 
 Demo has limited functionality available without login - super basic functionality with tasks being kept in the localStorage (max 10 tasks).
 
-Overview of the envisioned app possibilities can be understood using the following login details:
+> Overview of the envisioned app possibilities can be understood using the following **login details:**
 
 
-**username:** taskenize@test.com,   **password: Abcd123!**
+> Username: taskenize@test.com  
+> Password: Abcd123!  
+> (Please do not attempt to change the password - you will not be able to proceed due to email functionality not being enabled.)
 
- (I count on you not trying to change the pass - you will anyway not be able to proceed due to email functionality not being enabled).
 
 Also, you can feel free to consult some of the documentation related links listed below:
 
-- Database structure:
-
-
-[GitHub](https://drive.google.com/file/d/12C9I5N8rUo2w6MeVaAs3YavWJoRIXnOU/view?usp=drive_link)
+- [Database structure:](https://drive.google.com/file/d/12C9I5N8rUo2w6MeVaAs3YavWJoRIXnOU/view?usp=drive_link)
 
 - FE_BE Contract:
 
