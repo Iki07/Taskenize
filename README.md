@@ -6,9 +6,9 @@
 
 
  > **Important Notes:**
-
+ >
  > **The frontend** is still in an early stage of development and represents a raw version of app vision. It does not fully showcase the intended quality and user experience just yet. This area is slated for significant enhancements moving forward.
-
+ >
  > Additionally, **the email functionality**, essential for operations such as verification and notifications, is not active in the current demo hosted for demonstration purposes. While this feature has been meticulously tested with Mailtrap in the development environment, activating it in the live environment is planned only if the project moves towards commercialization. This approach ensures that we prioritize the safety and integrity of the project.
 
 
@@ -54,8 +54,11 @@ Application can be accessed on the following link: [Taskenize](http://307w123.e2
 Demo has limited functionality available without login - super basic functionality with tasks being kept in the localStorage (max 10 tasks).
 
 > Overview of the envisioned app possibilities can be understood using the following **login details:**
-> Username: **taskenize@test.com**  
-> Password: **Abcd123!**  
+> 
+> Username: **taskenize@test.com**
+> 
+> Password: **Abcd123!**
+> 
 > (Please do not attempt to change the password - you will not be able to proceed due to email functionality not being enabled.)
 
 
