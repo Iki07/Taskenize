@@ -1,6 +1,6 @@
 # Taskenize (Agenda like app)
- Taskenize is a multitenant application, designed to be a daily assistant in task management, aimed at individuals, small to medium enterprises, as well as teams wihtin large organisations. This application is envisioned to allow individuals to plan their activities more easily, while providing companies and teams with the tool for transparent task management, resource utilisation, and an enabler of collaboration within and between the teams.
- This project is developed as a closure of 3-month long aprenticeship program. Development time - 7weeks. 
+ Taskenize is a multitenant application, designed to be a daily assistant in task management, aimed at individuals, small to medium enterprises, as well as teams within large organisations. This application is envisioned to allow individuals to plan their activities more easily, while providing companies and teams with the tool for transparent task management, resource utilisation, and an enabler of collaboration within and between the teams.
+ This project is developed as a closure of 3-month long apprenticeship program. Development time - 7weeks. 
  DISCLAIMER: Front end has not been fully finalized, what you see is very raw version of it. 
  In addition, email is not functioning, as site is hosted for demo purposes only (but it is thoroughly tested with Mailtrap).
 
@@ -11,7 +11,7 @@
 - Database design
 - Development of authentication functionalities (login, registration, password reset) on the frontend
 - Design of the landing page using HTML/CSS, logo
-- Standardization of repetitive FE tasks (utilites folder in FE)
+- Standardization of repetitive FE tasks ("utilities" folder in FE)
 
 ## Technical Details
 
@@ -31,13 +31,13 @@
 
 
 - **App Architecture**
-TASKENIZE utilizes a client-server architecture, where the frontend is developed using Vue3 (Compposition API style) for an interactive user experience, while the backend is based on the MARS engine, a serverless technology that enables efficient management of backend logic without the need for detailed DevOps configurations. Communication between the client and server occurs over defined RESTful API routes.
+TASKENIZE utilizes a client-server architecture, where the frontend is developed using Vue3 (Composition API style) for an interactive user experience, while the backend is based on the MARS engine, a serverless technology that enables efficient management of backend logic without the need for detailed DevOps configurations. Communication between the client and server occurs over defined RESTful API routes.
 
 The backend consists of modularly organized JavaScript files that implement functionalities such as user management, authentication, and task, project and workspace management. Each functionality is separated into distinct services for easier maintenance and scaling. The database uses MySQL and is designed to efficiently support these functionalities while maintaining a high level of integrity and performance.
 
 The frontend is structured around Vue3 components, and logically split views. Pinia is used for state management of the application, while Axios enables asynchronous communication with the backend. Vue Router is crucial for navigation within the app, providing a seamless user experience without the need for page refreshes.
 
-The database design focuses on efficiency and scalability, with entities such as Users, Tasks, Projects, and Wokspaces, which are interconnected to support complex project and task management functionalities. The schema is (hopefully) carefully planned to support fast data access and straightforward queries, forming the foundation for a robust task management system.
+The database design focuses on efficiency and scalability, with entities such as Users, Tasks, Projects, and Workspaces..., which are interconnected to support complex project and task management functionalities. The schema is (hopefully) carefully planned to support fast data access and straightforward queries, forming the foundation for a robust task management system.
 
 
 ## Demo and Documentation
@@ -46,7 +46,7 @@ Application can be accessed on the following link: http://307w123.e2.mars-hostin
 Demo has limited functionality available without login - super basic functionality with tasks being kept in the localStorage (max 10 tasks).
 
 Overview of the envisioned app possibilities can be understood using the following login details:
-username: taskenize@test.com, password: Abcd123! (I count on you not trying to change the pass - you will anyway not be able to proceed due to email fucntionality not being enabled).
+username: taskenize@test.com, password: Abcd123! (I count on you not trying to change the pass - you will anyway not be able to proceed due to email functionality not being enabled).
 
 or by visiting some of the documentation related links listed below:
 
