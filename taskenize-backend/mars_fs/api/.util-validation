@@ -1,0 +1,55 @@
+exports.prepareString = function(text) {
+    const textSanitized = sanitize(text);
+    return textSanitized.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+};
+
+exports.validatePassword = function(password) {
+    const passwordPattern = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+{}:"<>?])[A-Za-z\d!@#$%^&*()_+{}:"<>?]{8,}$/;
+    return passwordPattern.test(password);
+};
+
+exports.isValidNumber = function(a) {
+    return !isNaN(a);
+};
+
+exports.validateDate = function(dateInput) {
+    const date = new DateTime('uuuu-MM-dd', dateInput);
+    if (!isNaN(date.getEpochMilliseconds())) {
+        return date;
+    }  else {
+        response.status(400);
+        write("msg", "Not a valid date format");
+        return null;
+    }
+}
+
+exports.validateFile = function(file, isAvatar = false) {
+    let maxFileSize;
+    let allowedTypes;
+    let fileIsOK = false;
+
+    if(isAvatar){
+        maxFileSize = 0.5 * 1024 *1024;
+        allowedTypes = ["image/jpeg", "image/jpg", "image/png", "image/webp", "image/svg+xml"];
+    } else {
+        maxFileSize = 2 * 1024 *1024;
+        allowedTypes = ["image/jpeg", "image/png", "image/bmp", "image/webp", "image/svg+xml", "application/pdf", "application/msword", "text/plain", "text/csv"];
+    }
+
+    if(file.size > maxFileSize) {
+        response.status(413); //payload too large
+        write("msg", "File is too big. Try uploading a different one.");
+        exit();
+    }
+
+    if(!allowedTypes.includes(file.contentType)) {
+        response.status(415); //unsupported media type
+        write('msg', "This format is not allowed."); 
+        exit();
+    }
+
+    fileIsOK = true;
+    return fileIsOK;
+}
+
+

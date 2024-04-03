@@ -1,0 +1,73 @@
+/********* token za validaciju email-a *************/
+exports.generateToken = function (email) {
+    const timestamp = Date.now(); // trenutno vreme
+    const expirationTime = timestamp + (30 * 60 * 1000); //vaznost 30 min
+    const tokenPayload = `${email}:${expirationTime}`;
+    return base64.encode(tokenPayload);
+};
+
+/*********** baseUrl za aplikaciju ****************/
+exports.baseUrl = env('baseUrl');
+
+/**************** slanje mail-a **************/
+let testMail=env('mailUser');
+let testPass=env('mailPass');
+exports.myMail = mail('sandbox.smtp.mailtrap.io',testMail, testPass, 'TLS', '2525');
+
+exports.sendEmail = function(myMail, subject, from, to, message) {
+    try {
+        myMail.subject(subject);
+        myMail.from(from);
+        myMail.to(to);
+        myMail.message(message);
+        myMail.send();
+
+        // Logovanje uspešnog slanja
+        response.status(200);
+        write('msg', 'Verification email has been sent.');
+    } catch (error) {
+        // Logovanje greške
+        response.status(500);
+        write('msg', `There was an error in sending email: ${error}`);
+    }
+};
+
+exports.generateEmailMessage = function(title, header, message, linkText, linkUrl) {
+    return `
+    <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+        "http://www.w3.org/TR/html4/strict.dtd">
+        <HTML>
+        <HEAD>
+            <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <TITLE>${title}</TITLE>
+         </HEAD>
+        <BODY>
+            <H1>${header}</H1>
+            <P>${message}<BR>
+            <A href="${linkUrl}">${linkText}</A></P>
+
+        </BODY>
+        </HTML>`; 
+};
+
+exports.checkSession = function(userData) {
+    if(!userData){
+        response.status(400);
+        write('msg', 'Session is not valid');
+        exit();
+    }
+};
+
+exports.fetchUserInfo = function(userId, userName) {
+    let userAuthData = db.query('SELECT rol_id, wsp_id FROM users_roles_wsps WHERE usr_id =? AND status = 1', userId);
+    let projectsManaged = db.query('SELECT prj_id, prj_name FROM projects WHERE pm_id =? AND prj_status = 1', userId);
+    let teamsManaged = db.query('SELECT tem_id, tem_name FROM teams WHERE tm_id =? AND tem_status = 1', userId);
+    let userInfo = {
+        "userId": userId,
+        "userName": userName,
+        "userAuthData": userAuthData,
+        "projecsManaged": projectsManaged,
+        "teamsManaged": teamsManaged
+    };
+    return userInfo;
+}

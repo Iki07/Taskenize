@@ -1,0 +1,71 @@
+//provera da li korisnik ima odredjenu rolu u odredjenom wspu
+exports.checkUserRole = function (wspIds, roleId, userAuthData) {
+      for (let i = 0; i < userAuthData.length; i++) {
+        const combo = userAuthData[i];
+        if (wspIds == "all" && combo.rol_id == roleId) {
+            return true;
+        } else if (Array.isArray(wspIds) && wspIds.includes(combo.wsp_id) && combo.rol_id === roleId) {
+            return true;
+        } else if (combo.wsp_id == wspIds && combo.rol_id == roleId) {
+            return true;
+        }
+    }
+    return false;
+}
+//varijanta 2
+exports.roleCheck = function (currentWspId, requiredRoleId, userAuthData) {
+    // zbog TypeError: invokeMember (some) on script.graal.GraalTable@3ad9390d failed due to: Unknown identifier: some gornja fja refaktorisana na
+    //return userAuthData.some(combo => combo.wsp_id === currentWspId && combo.rol_id === requiredRoleId);
+    for (let i=0; i < userAuthData.length; i++) {
+        if(userAuthData[i].wsp_id == currentWspId && userAuthData[i].rol_id == requiredRoleId) {
+            return true;
+        }
+    }
+    return false;
+}
+
+//vraca sve wsps u kojima korisnik ima zadatu rolu
+/*exports.getWsps = function (userAuthData, roleId) {
+  let filteredWsps = userAuthData.filter(item => item.rol_id == roleId);
+  let wspIds = filteredWsps.map(item => item.wsp_id);
+  return wspIds;
+}*/
+exports.getWsps = function (userAuthData, roleId) {
+    let wspIds = [];
+    for (let i = 0; i < userAuthData.length; i++) {
+        if (userAuthData[i].rol_id == roleId) {
+            wspIds.push(userAuthData[i].wsp_id)
+        }
+    }
+    return wspIds;
+}
+
+/*problem: TypeError: invokeMember (forEach) on script.graal.GraalTable@17e9134 failed due to: Unknown identifier: forEach
+exports.countWsps = function (roleId, userAuthData) {
+    let count = 0;
+    userAuthData.forEach(combo => {
+        if (combo.rol_id == roleId) {
+            count++;
+        }
+    });
+    return count;
+}*/
+exports.countWsps = function (roleId, userAuthData) {
+    let count = 0;
+    for(let i=0; i < userAuthData.length; i++) {
+        if(userAuthData[i].rol_id == roleId) {
+            count++
+        }
+    }
+    return count;
+}
+
+//vraca sve wsps kojima je dodeljen korisnik
+exports.getAllWsps = function (userAuthData) {
+    let wspIds = [];
+    for (let i=0; i < userAuthData.length; i++){
+        wspIds.push(userAuthData[i].wsp_id);
+    }
+    let uniqueWspIds = [...new Set(wspIds)];
+    return uniqueWspIds;
+}
