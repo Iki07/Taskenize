@@ -25,3 +25,13 @@ taskenize-frontend/node_modules/
 taskenize-frontend/.gitignore
 
 taskenize-frontend/README-original.md
+
+taskenize-backend/package-lock.json
+
+taskenize-backend/package.json
+
+taskenize-backend/pnpm-lock.yaml
+
+taskenize-backend/tokenizer.js
+
+taskenize-backend/index.js
