@@ -1,13 +1,15 @@
 # Taskenize (Agenda like app)
- Taskenize is a multitenant application, designed to be a daily assistant in task management, aimed at individuals, small to medium enterprises, as well as teams within large organisations. This application is envisioned to allow individuals to plan their activities more easily, while providing companies and teams with the tool for transparent task management, resource utilisation, and an enabler of collaboration within and between the teams.  
+ Taskenize is a multitenant application, designed to be a daily assistant in task management, aimed at individuals, small to medium enterprises, as well as teams within large organisations. This application is envisioned to allow individuals to plan their activities more easily, while providing companies and teams with the tool for transparent task management, resource utilisation, and an enabler of collaboration within and between the teams.
+ 
  This project is developed as a closure of 3-month long apprenticeship program. Development time - 7weeks.
 
 
 
- > **Important Notes:** 
- > **The frontend** is still in an early stage of development and represents a raw version of app vision. It does not fully showcase the intended quality and user experience just yet. This area is slated for significant enhancements moving forward.
-
- > Additionally, it's important to note that the **email functionality**, essential for operations such as verification and notifications, is not active in the current demo hosted for demonstration purposes. While this feature has been meticulously tested with Mailtrap in the development environment, activating it in the live environment is planned only if the project moves towards commercialization. This approach ensures that we prioritize the safety and integrity of the project.
+ > **Important Notes:**
+ >
+ > - **The frontend** is still in an early stage of development and represents a raw version of app vision. It does not fully showcase the intended quality and user experience just yet. This area is slated for significant enhancements moving forward.
+ >
+ > - Additionally, **the email functionality**, essential for operations such as verification and notifications, is not active in the current demo hosted for demonstration purposes. While this feature has been meticulously tested with Mailtrap in the development environment, activating it in the live environment is planned only if the project moves towards commercialization. This approach ensures that we prioritize the safety and integrity of the project.
 
 
 
@@ -52,8 +54,11 @@ Application can be accessed on the following link: [Taskenize](http://307w123.e2
 Demo has limited functionality available without login - super basic functionality with tasks being kept in the localStorage (max 10 tasks).
 
 > Overview of the envisioned app possibilities can be understood using the following **login details:**
-> Username: **taskenize@test.com**  
-> Password: **Abcd123!**  
+> 
+> - Username: **taskenize@test.com**
+> 
+> - Password: **Abcd123!**
+> 
 > (Please do not attempt to change the password - you will not be able to proceed due to email functionality not being enabled.)
 
 
@@ -75,7 +80,7 @@ The project was developed using the MARS engine, a serverless technology that al
 
 
 ## Licence
-The project is licensed under the MIT license.
+The project is licensed under the MIT license - refer to LICENCE file for details.
 
 ## Contact
 For additional information, questions, or collaboration opportunities, feel free to contact me at: [irena.popovic07@gmail.com](mailto:irena.popovic07@gmail.com)
